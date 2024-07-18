@@ -1,0 +1,101 @@
+codice, link, nome, descrizione, prezzo
+bb_acq, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_acq.jpg, 
+bb_bck, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_bck.jpg, 
+bb_ccl, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_ccl.jpg, 
+bb_ccz, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_ccz.jpg, 
+bb_cer, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_cer.jpg, 
+bb_chn, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_chn.jpg, 
+bb_esl, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_esl.jpg, 
+bb_esp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_esp.jpg, 
+bb_fnt, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_fnt.jpg, 
+bb_grb, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_grb.jpg, 
+bb_grd, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_grd.jpg, 
+bb_grl, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_grl.jpg, 
+bb_mor, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_mor.jpg, 
+bb_por, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_por.jpg, 
+bb_shw, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_shw.jpg, 
+bb_spr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_spr.jpg, 
+bb_ten, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/bb_ten.jpg, 
+
+cz_apr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/cz_apr.jpg, 
+cz_ccc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/cz_ccc.jpg, Calzone Chiuso Classico, Mozzarella Pomodoro Prosciutto Cotto 
+cz_ccv, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/cz_ccv.jpg, Calzone Chiuso alle verdure, Carciofini Funghi Melanzane Mozzarella Olive Peperoni Pomodoro Zucchine
+cz_pss, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/cz_pss.jpg, 
+cz_pst, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/cz_pst.jpg, 
+cz_scc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/cz_scc.jpg, 
+cz_sfr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/cz_sfr.jpg, Calzone APERTO Salsiccia e friarielli, Friarielli Mozzarella Pomodoro Salsiccia
+
+fc_brr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/fc_brr.jpg, Burrata, Burrata Origano Pomodorini Freschi Rucola 
+fc_dcc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/fc_dcc.jpg, Della Casa con Crudo, Mozzarella di Bufala Origano Pomodorini Freschi Prosciutto Crudo Rucola
+fc_dcs, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/fc_dcs.jpg, Della Casa, Mozzarella di Bufala Origano Pomodorini Freschi Rucola
+fc_dnn, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/fc_dnn.jpg, Della Nonna, Mais Origano Pinoli Pomodorini Freschi Rucola
+fc_lrd, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/fc_lrd.jpg, Lardo, Lardo
+fc_mst, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/fc_mst.jpg, Mista, Lardo Mozzarella di Bufala Origano Pomodorini Freschi Prosciutto Crudo Rucola Speck 
+fc_pcr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/fc_pcr.jpg, Prosciutto Crudo, Prosciutto Crudo
+fc_rsa, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/fc_rsa.jpg, Rosa, Olive Origano Pomodorini Freschi Rucola
+fc_srr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/fc_srr.jpg, Stracchino e Rosmarino, Rosmarino Stracchino
+
+pc_bfl, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_bfl.jpg, Bufala, Mozzarella di Bufala Pomodoro
+pc_bnc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_bnc.jpg, Bianca, Mozzarella 
+pc_brt, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_brt.jpg, Burrata, Burrata Pomodoro Rucola
+pc_bsk, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_bsk.jpg, Bismark, Mozzarella Pomodoro Prosciutto Cotto Uova
+pc_ccc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_ccc.jpg, Capricciosa, Carciofini Funghi Mozzarella Olive Pomodoro Prosciutto Cotto Salame Piccante
+pc_clz, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_clz.jpg, Calzone, Mozzarella Pomodoro Prosciutto Cotto
+pc_cpl, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_cpl.jpg, Cipolla, Cipolla Mozzarella Pomodoro
+pc_cpr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_cpr.jpg, Capperi, Capperi Mozzarella Pomodoro
+pc_fhp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_fhp.jpg, Funghi e Prosciutto, Funghi Mozzarella Pomodoro Prosciutto Cotto
+pc_fnh, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_fnh.jpg, Funghi, Funghi Mozzarella Pomodoro
+pc_fpo, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_fpo.jpg, Funghi Olive e Prosciutto, Funghi Mozzarella Olive Pomodoro Prosciutto Cotto
+pc_ggz, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_ggz.jpg, Gorgonzola, Gorgonzola Mozzarella Pomodoro
+pc_mas, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_mas.jpg, Mais, Mais Mozzarella Pomodoro
+pc_mhr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_mhr.jpg, Margherita Rinforzata, Doppia Mozzarella Pomodoro 
+pc_mlz, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_mlz.jpg, Melanzane, Melanzane Mozzarella Pomodoro
+pc_mrh, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_mrh.jpg, Margherita, Mozzarella Pomodoro
+pc_mrn, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_mrn.jpg, Marinara, Aglio Origano Pomodoro
+pc_npl, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_npl.jpg, Napoletana, Acciughe Mozzarella Pomodoro
+pc_olv, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_olv.jpg, Olive, Mozzarella Olive Pomodoro
+pc_opr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_opr.jpg, Olive e Prosciutto, Mozzarella Olive Pomodoro Prosciutto Cotto
+pc_ort, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_ort.jpg, Ortolana, Carciofini Funghi Melanzane Mozzarella Olive Peperoni Pomodoro Zucchine
+pc_pmd, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_pmd.jpg, Pomodorini Freschi, Mozzarella Pomodorini Freschi 
+pc_prc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_prc.jpg, Prosciutto Crudo, Mozzarella Pomodoro Prosciutto Crudo
+pc_prs, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_prs.jpg, Prosciutto, Mozzarella Pomodoro Prosciutto Cotto
+pc_ptp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_ptp.jpg, Patapizza, Mozzarella Patatine fritte Pomodoro
+pc_qfr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_qfr.jpg, Quattro Formaggi, Fontina Gorgonzola Mozzarella Pomodoro Scamorza
+pc_qtg, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_qtg.jpg, Quattro Stagioni, Funghi Mozzarella Olive Pomodoro Prosciutto Cotto
+pc_rcl, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_rcl.jpg, Rucola, Mozzarella Pomodoro Rucola
+pc_rnp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_rnp.jpg, Rinforzata Napoletana, Acciughe Doppia Mozzarella Pomodoro
+pc_rzp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_rzp.jpg, Rinforzata al Prosciutto, Doppia Mozzarella Pomodoro Prosciutto Cotto
+pc_scc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_scc.jpg, Salsiccia, Mozzarella Pomodoro Salsiccia
+pc_spc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_spc.jpg, Salame Piccante, Mozzarella Pomodoro Salame Piccante
+pc_tnc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_tnc.jpg, Würstel, Mozzarella Pomodoro Würstel
+pc_wrl, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pc_wrl.jpg, Tonno e Carciofini, Carciofini Mozzarella Pomodoro Tonno
+
+
+pg_ccr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_ccr.jpg, Speck e Brie, Brie Mozzarella Pomodoro Speck
+pg_cpg, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_cpg.jpg, Cipolle e Gorgonzola, Cipolla Gorgonzola Mozzarella Pomodoro
+pg_cpl, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_cpl.jpg, Cipolle e Capperi, Capperi Cipolla Mozzarella Pomodoro
+pg_fpp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_fpp.jpg, Funghi Panna e Prosciutto, Funghi Mozzarella Panna Pomodoro Prosciutto Cotto
+pg_ggp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_ggp.jpg, Gorgo e Pere, Gorgonzola Mozzarella Pere Pomodoro
+pg_ggs, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_ggs.jpg, Gorgonzola e Speck, Gorgonzola Mozzarella Pomodoro Speck
+pg_gpt, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_gpt.jpg, Gorgonzola e Pancetta, Gorgonzola Mozzarella Pancetta Pomodoro
+pg_pcp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_pcp.jpg, Prosciutto Crudo e Parmigiano, Mozzarella Parmigiano Pomodoro Prosciutto Crudo
+pg_ppr, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_ppr.jpg, Peperoni, Acciughe Mozzarella Peperoni Pomodoro
+pg_qfc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_qfc.jpg, Quattro Formaggi e Crudo - Bianca, Fontina Gorgonzola Mozzarella Prosciutto Crudo Scamorza
+pg_scf, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_scf.jpg, Salsiccia e Friarielli, Friarielli Mozzarella Pomodoro Salsiccia
+pg_sgg, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_sgg.jpg, Salsiccia e Gorgonzola, Gorgonzola Mozzarella Pomodoro Salsiccia
+pg_spc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_spc.jpg, Salame Piccante e Cipolla, Cipolla Mozzarella Pomodoro Salame Piccante
+pg_stc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_stc.jpg, Stracchino, Mozzarella Pomodoro Stracchino
+pg_wrg, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/pg_wrg.jpg, Würstel e Gorgonzola, Gorgonzola Mozzarella Pomodoro Würstel
+
+ps_czv, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_czv.jpg, Calzone alle Verdure, Carciofini Funghi Melanzane Mozzarella Olive Peperoni Pomodoro Zucchine
+ps_fpc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_fpc.jpg, Funghi e Prosciutto Crudo, Funghi Mozzarella Pomodoro Prosciutto Crudo
+ps_fpi, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_fpi.jpg, Funghi Porcini, Funghi porcini Mozzarella Pomodoro 
+ps_fpp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_fpp.jpg, Funghi Panna e Peperoni, Funghi Mozzarella Panna Peperoni Pomodoro
+ps_gmb, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_gmb.jpg, Gamberi*, Gamberi* Mozzarella Pomodorini Freschi Rucola
+ps_mrp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_mrp.jpg, Mais Rucola e Parmigiano, Mais Mozzarella Parmigiano Pomodoro Rucola
+ps_pfp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_pfp.jpg, Pomodorini Freschi e Prosciutto Crudo, Mozzarella Pomodorini Freschi Prosciutto Crudo 
+ps_stc, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_stc.jpg, Salsiccia Toscana e Castelmagno, Castelmagno Mozzarella Pomodoro Salsiccia toscana
+ps_stp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_stp.jpg, Salsiccia Toscana e Pecorino, Mozzarella Pecorino Pomodoro Salsiccia toscana
+ps_sts, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_sts.jpg, Salsiccia Toscana, Mozzarella Pomodoro Salsiccia toscana 
+ps_tor, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_tor.jpg, Tonno  Olive e Rucola, Mozzarella Olive Pomodoro Rucola Tonno
+ps_trp, https://raw.githubusercontent.com/fornou/PRJ_PizzeriaDerubati/main/db/fotoProdotti/downloaded_images/ps_trp.jpg, Tropea, Cipolla rossa Mozzarella n'duja Pomodoro
