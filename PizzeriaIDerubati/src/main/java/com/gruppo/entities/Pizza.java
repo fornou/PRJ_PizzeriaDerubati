@@ -6,10 +6,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "prodotti")
+@Table(name = "ft_prodotto")
 public class Pizza {
     @Id
-    @Column(name = "codice")
+    @Column(name = "codProd")
     private String codice;
 
     @Column(name = "nome")

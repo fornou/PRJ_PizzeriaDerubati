@@ -31,9 +31,9 @@ CREATE TABLE ft_ordine_prodotto(
     quantita INT,
 	PRIMARY KEY(codProd, codOrd),
 	CONSTRAINT FK_codProd 
-		FOREIGN KEY (codProd) REFERENCES ft_prodotti(codProd),
+		FOREIGN KEY (codProd) REFERENCES ft_prodotto(codProd),
 	CONSTRAINT FK_codOrd
-		FOREIGN KEY (codOrd) REFERENCES ft_ordini(codOrd)
+		FOREIGN KEY (codOrd) REFERENCES ft_ordine(codOrd)
 );
 -- ///////////////////////////////////////////////////////
 -- ///////////////////////////////////////////////////////
