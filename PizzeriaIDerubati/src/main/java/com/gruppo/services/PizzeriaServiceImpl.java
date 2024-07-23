@@ -20,7 +20,7 @@ public class PizzeriaServiceImpl implements PizzeriaService {
 
 	@Override
 	public Pizza getPizzaByCodice(String codice) {
-		return pizzaDao.findByCodice(codice);
+		return pizzaDao.findByCodProd(codice);
 	}
 
 }

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PizzeriaIDerubatiApplication<pizzeria-i-derubati>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.gruppo.PizzeriaIDerubatiApplication",
+            "projectName": "pizzeria-i-derubati",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

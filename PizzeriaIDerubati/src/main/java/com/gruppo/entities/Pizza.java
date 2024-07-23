@@ -1,6 +1,5 @@
 package com.gruppo.entities;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -8,20 +7,35 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "ft_prodotto")
 public class Pizza {
+	
     @Id
-    @Column(name = "codProd")
-    private String codice;
+    private String codProd;
 
-    @Column(name = "nome")
     private String nome;
-    @Column(name = "descrizione")
+    
     private String descrizione;
-    @Column(name = "prezzo")
+   
     private double prezzo;
-    @Column(name = "link")
-    private String imgURL;
+    
+    private String link;
 
-    public String getDescrizione() {
+	public String getCodProd() {
+		return codProd;
+	}
+
+	public void setCodProd(String codProd) {
+		this.codProd = codProd;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescrizione() {
 		return descrizione;
 	}
 
@@ -29,35 +43,23 @@ public class Pizza {
 		this.descrizione = descrizione;
 	}
 
-	public String getCodice() {
-        return codice;
-    }
+	public double getPrezzo() {
+		return prezzo;
+	}
 
-    public void setCodice(String codice) {
-        this.codice = codice;
-    }
+	public void setPrezzo(double prezzo) {
+		this.prezzo = prezzo;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public String getLink() {
+		return link;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public double getPrezzo() {
-        return prezzo;
-    }
-
-    public void setPrezzo(double prezzo) {
-        this.prezzo = prezzo;
-    }
-
-    public String getImgURL() {
-        return imgURL;
-    }
-
-    public void setImgURL(String imgURL) {
-        this.imgURL = imgURL;
-    }
+	public void setLink(String link) {
+		this.link = link;
+	}
+    
+	
+    
+    
 }
