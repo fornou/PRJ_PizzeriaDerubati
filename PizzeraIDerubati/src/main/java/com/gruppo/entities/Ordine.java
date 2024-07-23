@@ -3,8 +3,6 @@ package com.gruppo.entities;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -25,8 +23,6 @@ public class Ordine {
 	@Column(name = "COD")
 	private int cod;
 
-	@ManyToMany(fetch = FetchType.EAGER, mappedBy = "ordini")
-	@JsonBackReference
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
 			name = "Ordini_Pizze", 
@@ -35,7 +31,7 @@ public class Ordine {
 	private Set<Pizza> pizze = new HashSet<>();
 	
 	@Column(name = "Data")
-	private String data;
+	private String data; 
 	
 	@Column(name = "StatoOrdine")
 	private String statoOrdine;
