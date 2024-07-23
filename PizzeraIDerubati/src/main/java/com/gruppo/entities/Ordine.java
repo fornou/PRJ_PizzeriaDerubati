@@ -11,6 +11,8 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
@@ -25,6 +27,11 @@ public class Ordine {
 
 	@ManyToMany(fetch = FetchType.EAGER, mappedBy = "ordini")
 	@JsonBackReference
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(
+			name = "Ordini_Pizze", 
+		    joinColumns = @JoinColumn(name = "ordine"), 
+		    inverseJoinColumns = @JoinColumn(name = "pizza"))
 	private Set<Pizza> pizze = new HashSet<>();
 	
 	@Column(name = "Data")
