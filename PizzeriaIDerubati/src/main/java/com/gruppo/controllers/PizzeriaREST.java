@@ -11,12 +11,30 @@ import com.gruppo.services.PizzeriaService;
 @Controller
 public class PizzeriaREST {
 
-	@Autowired
-	private PizzeriaService service;
-	
-	@GetMapping("/home")
-	public String home(@RequestParam(required = false) String param, Model m) {
-		m.addAttribute("pizze", service.getPizze());
-		return "homepage";
-	}
+    @Autowired
+    private PizzeriaService service;
+    
+    // Gestione della pagina dei prodotti (pizze)
+    @GetMapping("/pizze")
+    public String pizze(@RequestParam(required = false) String param, Model m) {
+        m.addAttribute("pizze", service.getPizze());
+        return "pizze";
+    }
+    
+    // Gestione della homepage
+    @GetMapping("/home")
+    public String home() {
+        return "home";
+    }
+    
+    @GetMapping("/inventa-pizza")
+    public String pizzaInventata() {
+        return "inventa-pizza";
+    }
+    
+    @GetMapping("/bevande")
+    public String bevande() {
+        return "bevande";
+    }
 }
+
