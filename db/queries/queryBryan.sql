@@ -1,26 +1,28 @@
-CREATE TABLE Ordine(
-	COD INT AUTO_INCREMENT,
-	Data date NOT NULL,
-	StatoOrdine ENUM ('In Attesa','Consegnato') DEFAULT NULL,
-	PRIMARY KEY(COD)
+CREATE TABLE ft_ordine(
+	ido INT AUTO_INCREMENT,
+	Data datetime DEFAULT CURRENT_TIMESTAMP,
+	Stato ENUM ('In Attesa','Consegnato') DEFAULT NULL,
+	PRIMARY KEY(ido)
 );
 
-CREATE TABLE Pizza(
-	IDP INT AUTO_INCREMENT,
+CREATE TABLE ft_pizza(
+	idp INT AUTO_INCREMENT,
 	Nome VARCHAR(100) UNIQUE NOT NULL,
 	Prezzo TINYINT CHECK(Prezzo>0) NOT NULL,
-	ImgURL VARCHAR(100) UNIQUE NOT NULL,
-	PRIMARY KEY(IDP)
+	Img TEXT NOT NULL,
+	Descrizione TEXT,
+	PRIMARY KEY(idp)
 );
 
-CREATE TABLE Ordini_Pizze(
-	Pizza INT,
-	Ordine INT,
-	PRIMARY KEY(Pizza, Ordine),
+CREATE TABLE ft_ordini_pizze(
+	ordine_ido INT,
+	pizza_idp INT,
+	quantita INT,
+	PRIMARY KEY(ordine_ido, pizza_idp),
 	CONSTRAINT FK_Pizza 
-		FOREIGN KEY (Pizza) REFERENCES Pizza(IDP),
+		FOREIGN KEY (pizza_idp) REFERENCES ft_pizza(idp),
 	CONSTRAINT FK_Ordine
-		FOREIGN KEY (Ordine) REFERENCES Ordine(COD)
+		FOREIGN KEY (ordine_ido) REFERENCES ft_ordine(ido)
 );
 
 CREATE TABLE Ingrediente(
@@ -53,19 +55,29 @@ CREATE TABLE NoPizza(
 		FOREIGN KEY (Ordine) REFERENCES Ordine(COD)
 );
 
-INSERT INTO Ordine (COD, Data, StatoOrdine)
-VALUES (1,'2024-07-17', 'In Attesa'),
-	   (2,'2024-08-17', 'Consegnato');
+INSERT INTO ft_ordine (Stato)
+VALUES ('In Attesa'),
+	   ('Consegnato');
 
-INSERT INTO Pizza (IDP, Nome, Prezzo, ImgURL)
-VALUES (1,'Margherita', 8, 'url_immagine_margherita'),
-       (2,'Diavola', 10, 'url_immagine_diavola'),
-	   (3,'Bufala', 9, 'url_immagine_bufala');
+INSERT INTO ft_pizza (Nome, Prezzo, Img)
+VALUES ('Margherita', 8, 'margherita.jpeg'),
+       ('Diavola', 10, 'diavola.jpeg'),
+	   ('Bufala', 9, 'url_immagine_bufala');
 
-INSERT INTO Ordini_Pizze (Pizza, Ordine)
+INSERT INTO ft_ordini_pizze (ft_pizza, ft_ordine)
 VALUES (1, 1),
        (2, 1),
 	   (3, 1),
 	   (1, 2),
        (2, 2),
 	   (3, 2);
+	   
+
+	 
+INSERT INTO ft_ordini_pizze (ordine_ido, pizza_idp, quantita)
+VALUES (1, 1, 4),
+       (2, 1, 1),
+	   (3, 1, 3),
+	   (1, 2, 1),
+       (2, 2, 6),
+	   (3, 2, 2);
