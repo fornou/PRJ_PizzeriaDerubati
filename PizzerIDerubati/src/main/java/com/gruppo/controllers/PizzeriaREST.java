@@ -24,6 +24,9 @@ public class PizzeriaREST {
 	
 	@Autowired
 	private OrdiniService oService;
+
+	@Autowired
+	private IngredientiService iService;
 	
 	@GetMapping("pizze")
 	public List<Pizza> getPizza() {
@@ -33,6 +36,11 @@ public class PizzeriaREST {
 	@GetMapping("pizze/{id}")
 	public Pizza getPizzaById(@PathVariable Integer id) {
 		return pService.getPizzaById(id);
+	}
+
+	@GetMapping("ingredienti")
+	public List<Ingrediente> getIngredienti() {
+		return iService.getIngredienti();
 	}
 	
 	@GetMapping("ordini")

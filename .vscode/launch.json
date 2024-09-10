@@ -9,6 +9,16 @@
             "projectName": "pizzeria-i-derubati",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PizzeraIDerubatiApplication<PizzerIDerubati>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.gruppo.PizzeraIDerubatiApplication",
+            "projectName": "PizzerIDerubati",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
