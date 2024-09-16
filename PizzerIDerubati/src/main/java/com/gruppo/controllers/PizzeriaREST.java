@@ -34,13 +34,23 @@ public class PizzeriaREST {
 	}
 
 	@GetMapping("bevande")
-	public List<Pizza> getBevande() {
+	public List<Pizza> getBevanda() {
 		return pService.getPizzaByTipo("bevanda");
 	}
 
 	@GetMapping("dolci")
 	public List<Pizza> getDolce() {
 		return pService.getPizzaByTipo("dolce");
+	}
+
+	@GetMapping("calzoni")
+	public List<Pizza> getCalzone() {
+		return pService.getPizzaByTipo("calzone");
+	}
+
+	@GetMapping("focaccia")
+	public List<Pizza> getFocaccia() {
+		return pService.getPizzaByTipo("focaccia");
 	}
 	
 	@GetMapping("pizze/codice/{id}")

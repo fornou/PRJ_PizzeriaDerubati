@@ -32,6 +32,16 @@ public class MVC {
 		return "dolci";
 	}
 
+	@GetMapping("focacce")
+	public String getFocacce() { 
+		return "focacce";
+	}
+
+	@GetMapping("calzoni")
+	public String getCalzoni() { 
+		return "calzoni";
+	}
+
 	@GetMapping("menu")
 	public String getMenu() { 
 		return "menu";

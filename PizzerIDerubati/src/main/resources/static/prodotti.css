@@ -117,11 +117,6 @@ main {
     background-image: url('carrello-icon.png');
 }
 
-.pizza button:hover {
-    background-color: #45a049; /* Colore al passaggio del mouse */
-    
-}
-
 img{
     width: 250px;
     height: 250px;
