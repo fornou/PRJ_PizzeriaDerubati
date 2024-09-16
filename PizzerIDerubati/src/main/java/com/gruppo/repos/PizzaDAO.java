@@ -9,6 +9,9 @@ import com.gruppo.entities.Pizza;
 
 public interface PizzaDAO extends JpaRepository<Pizza, Integer> {
 
+    @Query(value = "select nome, prezzo, img, descrizione, tipo from ft_pizza", nativeQuery = true)
+    public List<Pizza> findPizze();
+
     @Query(value = "select distinct(tipo) from ft_pizza", nativeQuery = true)
 	public List<String> findDistinctTipo();
 

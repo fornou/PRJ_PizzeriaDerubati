@@ -11,15 +11,30 @@ public class MVC {
 	String home() {
 		return "home";
 	}
+
+	@GetMapping("home")
+	String home2() {
+		return "home";
+	}
 	
 	@GetMapping("pizze")
 	public String getPizze() { 
 		return "pizze";
 	}
 
-	@GetMapping("pizze2")
-	public String getPizze2() { 
-		return "pizze2";
+	@GetMapping("bevande")
+	public String getBevande() { 
+		return "bevande";
+	}
+
+	@GetMapping("dolci")
+	public String getDolci() { 
+		return "dolci";
+	}
+
+	@GetMapping("menu")
+	public String getMenu() { 
+		return "menu";
 	}
 	
 	@GetMapping("ordini")

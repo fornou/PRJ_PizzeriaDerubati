@@ -1,13 +1,66 @@
-<!doctype html>
-<html lang="it">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Pizze</title>
-		<meta name="description" content="My new wonderful website">
-		<meta name="author" content="Mister X">
-		<link rel="stylesheet" href=" /styles.css?v=1.0">
-		<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: #f3e5ab;
+    color: #d32f2f;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #d32f2f;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+              text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #5d4037;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+              text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+.pizza, .ordine {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+}
+
+.pizza img {
+    max-width: 100%;
+    height: auto;
+}
+
 #pizze {
     display: flex;
     flex-wrap: wrap; /* Permette agli elementi di andare a capo */
@@ -53,29 +106,23 @@
     margin: 5px 0; /* Spazio tra i pulsanti */
     padding: 8px 16px; /* Padding interno del pulsante */
     background-color: #4CAF50; /* Colore di sfondo del pulsante */
+    background-image: url('carrello-icon.png');
     color: white; /* Colore del testo del pulsante */
     border: none; /* Rimuove il bordo */
     cursor: pointer; /* Cambia il cursore quando si passa sul pulsante */
 }
 
-.pizza button:hover {
-    background-color: #45a049; /* Colore al passaggio del mouse */
+.pizza button.remove{
+    background-color: red; /* Colore di sfondo del pulsante */
+    background-image: url('carrello-icon.png');
 }
 
-		
-		</style>
-	</head>
-	<body>
-    	<header>
-        	<h1>Le nostre Pizze</h1>
-    	</header>
-    	<main>
-        	<a href="/">Home</a>
-        	<div id="pizze"></div>
-        	<a href="carrello">Vai al Carrello</a>
-    	</main>
-    <script src="scriptPizze.js"></script>
-</body>
-	
-	
-</html>
+.pizza button:hover {
+    background-color: #45a049; /* Colore al passaggio del mouse */
+    
+}
+
+img{
+    width: 250px;
+    height: 250px;
+}

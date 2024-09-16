@@ -29,11 +29,6 @@ public class Pizza {
     @OneToMany(mappedBy = "pizza", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonBackReference
     private Set<OrdinePizza> ordiniPizze = new HashSet<>();
-    
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "pizze")
-    @JsonManagedReference
-    @JsonIgnore
-    private Set<Ingrediente> ingredienti = new HashSet<>();
 
     @Column(name = "Nome")
     private String nome;
