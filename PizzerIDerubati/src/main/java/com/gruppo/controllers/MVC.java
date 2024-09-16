@@ -16,6 +16,11 @@ public class MVC {
 	public String getPizze() { 
 		return "pizze";
 	}
+
+	@GetMapping("pizze2")
+	public String getPizze2() { 
+		return "pizze2";
+	}
 	
 	@GetMapping("ordini")
 	public String getOrdini() { 

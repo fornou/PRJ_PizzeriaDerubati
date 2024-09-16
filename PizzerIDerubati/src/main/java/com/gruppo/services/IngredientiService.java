@@ -5,5 +5,7 @@ import java.util.List;
 import com.gruppo.entities.Ingrediente;
 
 public interface IngredientiService {
-    List<Ingrediente> getIngredienti();
+    public List<Ingrediente> getIngredienti();
+    public Ingrediente getIngredienteById(int id);
+    public Ingrediente getIngredienteByNome(String nome);
 }

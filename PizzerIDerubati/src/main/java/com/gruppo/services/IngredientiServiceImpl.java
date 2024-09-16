@@ -17,4 +17,14 @@ public class IngredientiServiceImpl implements IngredientiService{
     public List<Ingrediente> getIngredienti(){
         return dao.findAll();
     }
+
+    @Override
+    public Ingrediente getIngredienteById(int id) {
+        return dao.findById(id).orElse(null);
+    }
+
+    @Override
+    public Ingrediente getIngredienteByNome(String nome) {
+        return dao.findByNome(nome);
+    }
 }

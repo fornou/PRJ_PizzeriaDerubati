@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Pizze</title>
+		<meta name="description" content="My new wonderful website">
+		<meta name="author" content="Mister X">
+		<link rel="stylesheet" href=" /styles.css?v=1.0">
+		<style>
+#pizze {
+    display: flex;
+    flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+    justify-content: space-between; /* Distribuisce gli elementi con spazi tra di loro */
+    align-items: stretch; /* Fa sì che tutte le schede abbiano la stessa altezza */
+}
+
+.pizza {
+    width: 30%; /* Circa un terzo dello spazio disponibile */
+    box-sizing: border-box; /* Include padding e border nella larghezza */
+    margin-bottom: 20px; /* Spaziatura tra le righe */
+    padding: 10px;
+    border: 1px solid #ccc; /* Bordo per separare visivamente le pizze */
+    display: flex;
+    flex-direction: column; /* Disporre gli elementi verticalmente */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    justify-content: space-between; /* Distribuisce uniformemente gli elementi */
+    text-align: center; /* Centra il testo all'interno */
+    flex-grow: 1; /* Permette alla scheda di crescere e allinearsi con le altre */
+}
+
+.pizza img {
+    max-width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+}
+
+.pizza h2 {
+    font-size: 1.5em; /* Dimensione del titolo */
+    margin: 10px 0; /* Spazio tra il titolo e gli altri elementi */
+}
+
+.pizza p {
+    margin: 5px 0; /* Spazio tra i paragrafi */
+}
+
+.pizza input {
+    margin: 10px 0; /* Spazio attorno all'input */
+    width: 50px; /* Larghezza dell'input */
+    text-align: center; /* Centra il valore all'interno dell'input */
+}
+
+.pizza button {
+    margin: 5px 0; /* Spazio tra i pulsanti */
+    padding: 8px 16px; /* Padding interno del pulsante */
+    background-color: #4CAF50; /* Colore di sfondo del pulsante */
+    color: white; /* Colore del testo del pulsante */
+    border: none; /* Rimuove il bordo */
+    cursor: pointer; /* Cambia il cursore quando si passa sul pulsante */
+}
+
+.pizza button:hover {
+    background-color: #45a049; /* Colore al passaggio del mouse */
+}
+
+		
+		</style>
+	</head>
+	<body>
+    	<header>
+        	<h1>Le nostre Pizze</h1>
+    	</header>
+    	<main>
+        	<a href="/">Home</a>
+        	<div id="pizze"></div>
+        	<a href="carrello">Vai al Carrello</a>
+    	</main>
+    <script src="scriptPizze.js"></script>
+</body>
+	
+	
+</html>
