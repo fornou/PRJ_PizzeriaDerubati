@@ -11,13 +11,15 @@
 	</head>
 	<body>
     	<header>
-			<h1>Derubati Menù</h1>
+			<h1>Pizzeria I Derubati</h1>
 			<h2>Le nostre Pizze</h2>
+			<div class="button-container">
+				<button class="action-btn" onclick="window.location.href='/menu'"> Menù </button>
+				<button class="action-btn" onclick="window.location.href='/carrello'"> Carrello </button>
+			</div>
     	</header>
     	<main>
-        	<a href="/">Home</a>
         	<div id="pizze" data-tipo="pizza"></div>
-        	<a href="carrello">Vai al Carrello</a>
     	</main>
     <script src="scriptProdotti.js"></script>
 </body>
