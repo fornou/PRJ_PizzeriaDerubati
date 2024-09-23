@@ -28,16 +28,16 @@ function caricaProdotti(tipo) {
                 description.textContent = pizza.descrizione;
                 pizzaDiv.appendChild(description);
 
-                // let quantityInput = document.createElement('input');
-                // quantityInput.type = 'number';
-                // quantityInput.min = '1';
-                // quantityInput.value = '1';
-                // pizzaDiv.appendChild(quantityInput);
+                let quantityInput = document.createElement('input');
+                quantityInput.type = 'number';
+                quantityInput.min = '1';
+                quantityInput.value = '1';
+                pizzaDiv.appendChild(quantityInput);
 
-                // let addButton = document.createElement('button');
-                // addButton.textContent = 'Aggiungi';
-                // addButton.onclick = () => aggiungiAlCarrello(pizza.idp, quantityInput.value);
-                // pizzaDiv.appendChild(addButton);
+                let addButton = document.createElement('button');
+                addButton.textContent = '+';
+                addButton.onclick = () => aggiungiAlCarrello(pizza.idp, quantityInput.value);
+                pizzaDiv.appendChild(addButton);
 
                 // let removeButton = document.createElement('button');
                 // removeButton.classList.add('remove');

@@ -1,7 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f3e5ab;
-    color: #333;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,15 +8,30 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
+}
+
+h1, h2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #d32f2f;
+    margin: 0;
+    
+}
+
+h2 {
+    font-size: 2em;
+    color: #5d4037;
+    margin-bottom: 40px;
 }
 
 /* Contenitore per i pulsanti */
 .button-container {
     display: flex;
-    flex-direction: column; /* Imposta i bottoni in colonna */
+    flex-direction: column;
     gap: 40px;
 }
 
@@ -43,24 +57,6 @@ body {
     box-shadow: none;
 }
 
-/* Stile per l'intestazione */
-h1 {
-    font-size: 3em;
-    color: #d32f2f;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-              text-align: center;
-}
-
-h2 {
-    font-size: 2em;
-    color: #5d4037;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-              text-align: center;
-}
-
-/* Stile per i dispositivi mobili */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5em;

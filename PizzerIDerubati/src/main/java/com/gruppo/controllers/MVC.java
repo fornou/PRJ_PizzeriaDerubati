@@ -17,29 +17,29 @@ public class MVC {
 		return "home";
 	}
 	
-	@GetMapping("pizze")
+	@GetMapping("pizza")
 	public String getPizze() { 
-		return "pizze";
+		return "pizza";
 	}
 
-	@GetMapping("bevande")
+	@GetMapping("bevanda")
 	public String getBevande() { 
-		return "bevande";
+		return "bevanda";
 	}
 
-	@GetMapping("dolci")
+	@GetMapping("dolce")
 	public String getDolci() { 
-		return "dolci";
+		return "dolce";
 	}
 
-	@GetMapping("focacce")
+	@GetMapping("focaccia")
 	public String getFocacce() { 
-		return "focacce";
+		return "focaccia";
 	}
 
-	@GetMapping("calzoni")
+	@GetMapping("calzone")
 	public String getCalzoni() { 
-		return "calzoni";
+		return "calzone";
 	}
 
 	@GetMapping("menu")

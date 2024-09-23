@@ -21,7 +21,6 @@ function visualizzaCarrello() {
                 let title = document.createElement('h2');
                 title.textContent = pizza.nome;
                 pizzaDiv.appendChild(title);
-                console.log(pizza.nome)
 
                 let price = document.createElement('p');
                 price.textContent = 'Prezzo: €' + pizza.prezzo;
@@ -32,9 +31,9 @@ function visualizzaCarrello() {
                 pizzaDiv.appendChild(quantity);
 				
 				
-                let description = document.createElement('p');
-                description.textContent = pizza.descrizione;
-                pizzaDiv.appendChild(description);
+                // let description = document.createElement('p');
+                // description.textContent = pizza.descrizione;
+                // pizzaDiv.appendChild(description);
 
                 container.appendChild(pizzaDiv);
                 
