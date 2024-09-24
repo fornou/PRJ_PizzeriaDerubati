@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gruppo.entities.Pizza;
+import com.gruppo.entities.PizzaP;
 import com.gruppo.repos.PizzaDAO;
 
 @Service
@@ -31,5 +32,14 @@ public class PizzeServiceImpl implements PizzeService{
 	@Override
 	public List<String> getPizzaTipi() {
 		return dao.findDistinctTipo();
+	}
+	
+	public List<PizzaP> getAllPizze() {
+	    return dao.findPizzeP();
+	}
+	
+	@Override
+	public List<PizzaP> getAllPizzeByTipo(String tipo) {
+	    return dao.findByTipoContainingP(tipo);
 	}
 }

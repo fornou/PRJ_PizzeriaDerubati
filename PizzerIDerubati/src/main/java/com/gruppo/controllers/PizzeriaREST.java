@@ -105,5 +105,39 @@ public class PizzeriaREST {
 	    return oService.saveOrdine(ordine);
 	}
 	
+	@GetMapping("proj/pizze")
+	public List<PizzaP> getPizzaP() {
+	     return pService.getAllPizzeByTipo("pizza");
+	}
+
+	@GetMapping("proj/bevande")
+    public List<PizzaP> getBevandaP() {
+        return pService.getAllPizzeByTipo("bevanda");
+    }
+
+    @GetMapping("proj/dolci")
+    public List<PizzaP> getDolceP() {
+        return pService.getAllPizzeByTipo("dolce");
+    }
+
+    @GetMapping("proj/calzoni")
+    public List<PizzaP> getCalzoneP() {
+        return pService.getAllPizzeByTipo("calzone");
+    }
+
+    @GetMapping("proj/focaccia")
+    public List<PizzaP> getFocacciaP() {
+        return pService.getAllPizzeByTipo("focaccia");
+    }
+
+    @GetMapping("proj/pizze/tipi")
+    public List<String> getPizzaTipiP() {
+        return pService.getPizzaTipi();
+    }
+
+    @GetMapping("proj/pizze/tipo/{tipo}")
+    public List<PizzaP> getPizzaByTipoP(@PathVariable String tipo) {
+        return pService.getAllPizzeByTipo(tipo);
+    }
 	
 }

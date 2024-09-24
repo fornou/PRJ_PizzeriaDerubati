@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
@@ -14,6 +13,8 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -29,6 +30,14 @@ public class Pizza {
     @OneToMany(mappedBy = "pizza", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonBackReference
     private Set<OrdinePizza> ordiniPizze = new HashSet<>();
+    
+    @ManyToMany(fetch = FetchType.EAGER)
+	@JsonManagedReference
+	@JoinTable(
+			name = "ft_Pizze_Ingredienti", 
+		    joinColumns = @JoinColumn(name = "id_pizza"), 
+		    inverseJoinColumns = @JoinColumn(name = "id_ingrediente"))
+	private Set<Ingrediente> ingredienti = new HashSet<>();
 
     @Column(name = "Nome")
     private String nome;
