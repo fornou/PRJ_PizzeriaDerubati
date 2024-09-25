@@ -1,7 +1,7 @@
 let carrello = JSON.parse(localStorage.getItem('carrello')) || [];
 
 function caricaProdotti(tipo) {
-    fetch(`api/pizze/tipo/${tipo}`)
+    fetch(`api/proj/pizze/tipo/${tipo}`)
         .then(response => response.json())
         .then(data => {
 
