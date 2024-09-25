@@ -1,9 +1,9 @@
-let carrello = JSON.parse(localStorage.getItem('carrello')) || [];
 let shoppingCart = JSON.parse(localStorage.getItem('carrello')) || [];
 let matrixIngredients = JSON.parse(localStorage.getItem('ingredientiMatrice')) || {}; 
 
-
 function visualizzaCarrello() {
+/*function view() {
+
     let container = document.getElementById('carrello');
     while (container.firstChild) {
         container.removeChild(container.firstChild);
@@ -260,6 +260,7 @@ document.getElementById('invia').addEventListener('click', () => {
         	localStorage.setItem('carrello', JSON.stringify(shoppingCart));
         	localStorage.setItem('ingredientiMatrice', JSON.stringify(matrixIngredients));
         	view();
+    	});
 });
 
 view();

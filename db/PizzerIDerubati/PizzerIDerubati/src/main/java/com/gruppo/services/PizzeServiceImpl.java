@@ -22,6 +22,8 @@ public class PizzeServiceImpl implements PizzeService{
 	public Pizza getPizzaById(Integer id) {
 		return dao.findById(id).orElse(null);
 	}
+
+	@Override
 	public List<Pizza> getPizzaByTipo(String tipo) {
 		return dao.findByTipoContaining(tipo);
 	}

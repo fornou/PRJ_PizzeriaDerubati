@@ -8,8 +8,6 @@ import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class OrdinePizzaId implements Serializable {
-
-	 private static final long serialVersionUID = 1L;
 	
 	@Column(name = "ft_ordine")
     private int ordineId;
