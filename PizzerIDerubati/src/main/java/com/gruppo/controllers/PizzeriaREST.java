@@ -78,7 +78,17 @@ public class PizzeriaREST {
 	public List<Ordine> getOrdine() {
 		return oService.getOrdine();
 	}
-	
+
+	@PostMapping("ordini/stato/aggiorna/{id}")
+	public Ordine getOrdineAggiornato(@PathVariable Integer id) {
+		return oService.aggiornaStatoOrdine(id);
+	}
+
+	@GetMapping("ordini/stato/{stato}")
+	public List<Ordine> getOrdineByStato(@PathVariable String stato) {
+		return oService.getOrdineByStato(stato);
+	}
+
 	@PostMapping("ordini")
 	public Ordine creaOrdine(@RequestBody List<PizzaOrdineRequest> pizzeOrdineRequest) {
 	    Ordine ordine = new Ordine();

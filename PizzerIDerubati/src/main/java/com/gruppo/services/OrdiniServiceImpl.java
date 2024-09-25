@@ -22,4 +22,14 @@ public class OrdiniServiceImpl implements OrdiniService{
 	public Ordine saveOrdine(Ordine ordine) {
 		return dao.save(ordine);
 	}
+
+	public Ordine aggiornaStatoOrdine(int ido) {
+        dao.updateStatoOrdine(ido);
+        return dao.findOrdineByCod(ido);
+    }
+
+	@Override
+	public List<Ordine> getOrdineByStato(String stato) {
+		return dao.findByStatoOrdineContaining(stato);
+	}
 }

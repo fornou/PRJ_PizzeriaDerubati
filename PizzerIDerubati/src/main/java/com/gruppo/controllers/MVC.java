@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MVC {
 	
 	@GetMapping("")
-	String home() {
-		return "home";
+	String index() {
+		return "index";
 	}
 
 	@GetMapping("home")
-	String home2() {
+	String home() {
 		return "home";
 	}
 	
