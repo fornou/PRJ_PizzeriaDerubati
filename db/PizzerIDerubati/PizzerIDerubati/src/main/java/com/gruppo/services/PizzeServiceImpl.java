@@ -22,4 +22,25 @@ public class PizzeServiceImpl implements PizzeService{
 	public Pizza getPizzaById(Integer id) {
 		return dao.findById(id).orElse(null);
 	}
+	public List<Pizza> getPizzaByTipo(String tipo) {
+		return dao.findByTipoContaining(tipo);
+	}
+
+	@Override
+	public List<String> getPizzaTipi() {
+		return dao.findDistinctTipo();
+	}
+	
+	public List<PizzaP> getAllPizze() {
+	    return dao.findPizzeP();
+	}
+	
+	@Override
+	public List<PizzaP> getAllPizzeByTipo(String tipo) {
+	    return dao.findByTipoContainingP(tipo);
+	}
+	
+	public PizzaP getAllPizzaById(Integer id) {
+		return dao.findPizzaById(id);
+	}
 }

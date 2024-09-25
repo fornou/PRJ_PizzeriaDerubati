@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bec1c5;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: #f3e5ab;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid  #5d4037;
+}
+
+h1, h2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 3em;
+    color: #d32f2f;
+}
+
+h2 {
+    font-size: 2em;
+    color: #5d4037;
+}
+
+main {
+    padding: 2rem;
+}
+
+.pizza, .ordine {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+}
+
+.pizza img {
+    max-width: 100%;
+    height: auto;
+}
+
+#pizze {
+    display: flex;
+    flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+    justify-content: space-between; /* Distribuisce gli elementi con spazi tra di loro */
+    align-items: stretch; /* Fa sì che tutte le schede abbiano la stessa altezza */
+}
+
+.pizza {
+    width: 30%; /* Circa un terzo dello spazio disponibile */
+    box-sizing: border-box; /* Include padding e border nella larghezza */
+    margin-bottom: 20px; /* Spaziatura tra le righe */
+    padding: 10px;
+    border: 1px solid #ccc; /* Bordo per separare visivamente le pizze */
+    display: flex;
+    flex-direction: column; /* Disporre gli elementi verticalmente */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    justify-content: space-between; /* Distribuisce uniformemente gli elementi */
+    text-align: center; /* Centra il testo all'interno */
+    flex-grow: 1; /* Permette alla scheda di crescere e allinearsi con le altre */
+    margin: 10px;
+    height: 500px;
+    width: 400px;
+}
+
+.pizza img {
+    max-width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+}
+
+.pizza h2 {
+    font-size: 1.5em;
+}
+
+.pizza input {
+    margin: 10px 0; 
+    width: 50px;
+    text-align: center; 
+}
+.pizza button{
+    width: 70px;
+    height: 40px;
+    background-color: #4CAF50; 
+    background-image: url('carrello-icon.png');
+    color: white;
+    cursor: pointer; 
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+}
+
+.action-btn {
+    background-color: #f57c00;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.action-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.ingredienti-container {
+    display: grid;
+    grid-template-columns: repeat(7, 2fr);
+    gap: 10px;
+    padding-left:250px
+}
+
+.ingredienti-container div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
