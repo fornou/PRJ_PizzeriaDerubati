@@ -27,76 +27,6 @@ h2 {
     color: #5d4037;
 }
 
-main {
-    padding: 2rem;
-}
-
-.pizza, .ordine {
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    padding: 1rem;
-    margin: 1rem 0;
-    background-color: white;
-}
-
-.pizza img {
-    max-width: 100%;
-    height: auto;
-}
-
-#pizze {
-    display: flex;
-    flex-wrap: wrap; /* Permette agli elementi di andare a capo */
-    justify-content: space-between; /* Distribuisce gli elementi con spazi tra di loro */
-    align-items: stretch; /* Fa sì che tutte le schede abbiano la stessa altezza */
-}
-
-.pizza {
-    width: 30%; /* Circa un terzo dello spazio disponibile */
-    box-sizing: border-box; /* Include padding e border nella larghezza */
-    margin-bottom: 20px; /* Spaziatura tra le righe */
-    padding: 10px;
-    border: 1px solid #ccc; /* Bordo per separare visivamente le pizze */
-    display: flex;
-    flex-direction: column; /* Disporre gli elementi verticalmente */
-    align-items: center; /* Centra gli elementi orizzontalmente */
-    justify-content: space-between; /* Distribuisce uniformemente gli elementi */
-    text-align: center; /* Centra il testo all'interno */
-    flex-grow: 1; /* Permette alla scheda di crescere e allinearsi con le altre */
-    margin: 10px;
-    height: 450px;
-}
-
-.pizza img {
-    max-width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
-    height: auto; /* Mantiene le proporzioni dell'immagine */
-}
-
-.pizza h2 {
-    font-size: 1.5em;
-}
-
-.pizza input {
-    margin: 10px 0; 
-    width: 50px;
-    text-align: center; 
-}
-
-.pizza button{
-    width: 150px;
-    height: 75px;
-    background-color: #4CAF50; 
-    background-image: url('carrello-icon.png');
-    color: white;
-    cursor: pointer; 
-}
-
-img{
-    width: 150px;
-    height: 150px;
-    border-radius: 40px;
-}
-
 .action-btn {
     background-color: #f57c00;
     color: #fff;
@@ -117,4 +47,91 @@ img{
 .action-btn:active {
     transform: translateY(0);
     box-shadow: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+#products-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.product {
+    margin: 12px;
+    width: 400px;
+    box-sizing: border-box; /* Include padding e border nella larghezza */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    text-align: center; 
+    height: 350px;
+    position: relative;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+}
+
+.product h2 {
+    font-size: 1.5em;
+}
+
+.product .price{
+    color: #f57c00;
+    font-size: 24px;
+    text-align: center;
+    display: inline-block;
+    font-weight: 900;
+}
+
+.product p{
+    margin: 5px;
+}
+
+.product input[type="number"] {
+    width: 50px;
+    height: 20px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #f57c00; /* bordo del campo */
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product button{
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+    border-radius: 50%;
+    background-color: #f57c00; 
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover{
+    background-color: #d16a03;
+}
+
+.product button.remove{
+    background-color: #ff0000;
+    position: absolute;
+    top: -10px;
+    left: 320px;
+}
+
+.product button.remove:hover{
+    background-color: #d16a03;
 }

@@ -4,28 +4,29 @@ function caricaProdotti(tipo) {
     fetch(`api/pizze/tipo/${tipo}`)
         .then(response => response.json())
         .then(data => {
-            let container = document.getElementById('pizze');
-            container.innerHTML = ''
-            data.forEach(pizza => {
-                let pizzaDiv = document.createElement('button');
-                pizzaDiv.classList.add('pizza');
+
+            let container = document.getElementById('products-container');
+
+            data.forEach(product => {
+
+                let pizzaDiv = document.createElement('div');
+                pizzaDiv.classList.add('product');
 
                 let title = document.createElement('h2');
-                title.textContent = pizza.nome;
+                title.textContent = product.nome;
                 pizzaDiv.appendChild(title);
 
                 let img = document.createElement('img');
-                img.src = pizza.img;
+                img.src = product.img;
                 pizzaDiv.appendChild(img);
 
                 let price = document.createElement('p');
-                price.textContent = pizza.prezzo + '€';
+                price.classList.add('price');
+                price.textContent = product.prezzo + '€';
                 pizzaDiv.appendChild(price);
 
-                
-
                 let description = document.createElement('p');
-                description.textContent = pizza.descrizione;
+                description.textContent = product.descrizione;
                 pizzaDiv.appendChild(description);
 
                 let quantityInput = document.createElement('input');
@@ -36,14 +37,9 @@ function caricaProdotti(tipo) {
 
                 let addButton = document.createElement('button');
                 addButton.textContent = '+';
-                addButton.onclick = () => aggiungiAlCarrello(pizza.idp, quantityInput.value);
+                addButton.onclick = () => aggiungiAlCarrello(product.idp, quantityInput.value);
                 pizzaDiv.appendChild(addButton);
-
-                // let removeButton = document.createElement('button');
-                // removeButton.classList.add('remove');
-                // removeButton.innerHTML = 'Rimuovi';
-                // removeButton.onclick = () => rimuoviDalCarrello(pizza.idp, quantityInput.value);
-                // pizzaDiv.appendChild(removeButton);
+                
                 container.appendChild(pizzaDiv);
             });
         });
@@ -60,20 +56,7 @@ function aggiungiAlCarrello(id, quantita) {
     alert('Pizza aggiunta al carrello!');
 }
 
-function rimuoviDalCarrello(id, quantita) {
-    let item = carrello.find(item => item.pizzaId === id);
-    if (item) {
-        item.quantita -= parseInt(quantita);
-        if (item.quantita <= 0) {
-            carrello = carrello.filter(item => item.pizzaId !== id);
-        }
-    }
-    localStorage.setItem('carrello', JSON.stringify(carrello));
-    alert('Pizza rimossa dal carrello!');
-    visualizzaCarrello();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    let tipoProdotto = document.getElementById('pizze').getAttribute('data-tipo');
+    let tipoProdotto = document.getElementById('products-container').getAttribute('data-tipo');
     caricaProdotti(tipoProdotto);
 });
