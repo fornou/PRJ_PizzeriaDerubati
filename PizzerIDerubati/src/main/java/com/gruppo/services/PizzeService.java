@@ -12,4 +12,5 @@ public interface PizzeService {
 	List<Pizza> getPizzaByTipo(String tipo);
 	List<PizzaP> getAllPizzeByTipo(String tipo);
 	List<PizzaP> getAllPizze();
+	PizzaP getAllPizzaById(Integer id);
 }

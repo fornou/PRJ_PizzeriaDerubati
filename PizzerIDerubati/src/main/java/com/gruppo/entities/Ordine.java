@@ -25,6 +25,10 @@ public class Ordine {
 	@OneToMany(mappedBy = "ordine", cascade = CascadeType.ALL)
     @JsonManagedReference
 	private Set<OrdinePizza> ordiniPizze = new HashSet<>();
+	
+	@OneToMany(mappedBy = "ordine", cascade = CascadeType.ALL, orphanRemoval = true)
+	@JsonManagedReference
+	private Set<OrdineIngrediente> ingredientiPersonalizzati = new HashSet<>();
 
     @Column(name = "Data")
     private String data;
@@ -43,6 +47,12 @@ public class Ordine {
 	}
 	public void setOrdiniPizze(Set<OrdinePizza> ordiniPizze) {
 		this.ordiniPizze = ordiniPizze;
+	}
+	public Set<OrdineIngrediente> getIngredientiPersonalizzati() {
+		return ingredientiPersonalizzati;
+	}
+	public void setIngredientiPersonalizzati(Set<OrdineIngrediente> ingredientiPersonalizzati) {
+		this.ingredientiPersonalizzati = ingredientiPersonalizzati;
 	}
 	public String getData() {
 		return data;

@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.gruppo.entities.Ordine;
+import com.gruppo.entities.OrdineP;
 
 public interface OrdineDAO extends JpaRepository<Ordine, Integer> {
 
@@ -21,4 +22,10 @@ public interface OrdineDAO extends JpaRepository<Ordine, Integer> {
     Ordine findOrdineByCod(int ido);
 
     List<Ordine> findByStatoOrdineContaining(String statoOrdine);
+    
+    @Query("SELECT o.cod AS cod, o.data AS data, o.statoOrdine AS statoOrdine, " +
+    	       "op AS ordiniPizze " +
+    	       "FROM Ordine o " +
+    	       "JOIN o.ordiniPizze op")
+    List<OrdineP> findAllOrdini();
 }

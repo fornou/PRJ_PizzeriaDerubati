@@ -135,3 +135,23 @@ main {
 .product button.remove:hover{
     background-color: #d16a03;
 }
+
+.ingredienti-container {
+    display: grid;
+    grid-template-columns: repeat(7, 2fr);
+    gap: 10px;
+}
+
+.ingredienti-container div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+p.ing {
+    position: absolute;
+    padding-top: 120px;
+    padding-left: 10px;
+}

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gruppo.entities.Ingrediente;
+import com.gruppo.entities.IngredienteP;
 import com.gruppo.repos.IngredienteDAO;
 
 @Service
@@ -27,4 +28,8 @@ public class IngredientiServiceImpl implements IngredientiService{
     public Ingrediente getIngredienteByNome(String nome) {
         return dao.findByNome(nome);
     }
+    
+    public List<IngredienteP> getAllIngredienti() {
+	    return dao.findIngredientiP();
+	}
 }
