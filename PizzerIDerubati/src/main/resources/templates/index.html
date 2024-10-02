@@ -6,20 +6,19 @@
 		<title>I Derubati - ModSelection</title>
 		<meta name="description" content="My new wonderful website">
 		<meta name="author" content="Mister X">
-		<link rel="stylesheet" href=" /index.css?v=1.1">
+		<link rel="stylesheet" href=" /home.css?v=1.1">
 		<link rel="icon" type="image/png" size="16x16"href=" /logo1-removebg.png">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
     	<header>
+			<img src="/logo1-removebg.png" alt="">
     	    <h1> "I Derubati" Mode </h1>
 			<h2> Seleziona la modalità di uso </h2>
+			<div class="button-container" id="button-container">
+				<button class="action-btn-menu" onclick="window.location.href='/ordini'">Cucina</button>
+				<button class="action-btn-menu" onclick="window.location.href='/home'">Totem</button>
+				<button class="action-btn-menu" onclick="window.location.href='/admin'">Administator</button>
+			</div>
     	</header>
-        <main>
-            <button onclick="window.location.href='/ordini'">Cucina</button>
-            <button onclick="window.location.href='/home'">Totem</button>
-            <button onclick="window.location.href='/admin'">Administator</button>
-        </main>
 	</body>	
 </html> 

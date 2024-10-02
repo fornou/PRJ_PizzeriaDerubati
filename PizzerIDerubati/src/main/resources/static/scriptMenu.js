@@ -5,7 +5,7 @@ fetch('api/pizze/tipi')
         data.forEach(tipo => {
             let buttontype = document.createElement('button');
             buttontype.textContent = tipo;
-            buttontype.classList.add('action-btn');
+            buttontype.classList.add('action-btn-menu');
 
             buttontype.onclick = function() {
                 window.location.href = '/' +  tipo.toLowerCase();
