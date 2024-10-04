@@ -57,7 +57,8 @@ function caricaProdotti(tipo) {
 }*/
 
 function aggiungiAlCarrello(id, quantita) {
-    carrello.push({ pizzaId: id, quantita: parseInt(quantita) });
+    let uniqueId = Date.now();
+    carrello.push({ pizzaId: id, quantita: parseInt(quantita), uniqueId });
     localStorage.setItem('carrello', JSON.stringify(carrello));
     alert('Pizza aggiunta al carrello!');
 }
