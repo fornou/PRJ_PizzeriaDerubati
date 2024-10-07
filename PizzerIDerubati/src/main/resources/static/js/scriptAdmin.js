@@ -1,34 +1,8 @@
-function setOrdineAsDone(idp) {
-    fetch(`api/ordini/stato/aggiorna/${idp}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`Errore: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Ordine aggiornato con successo:', data);
-        alert(`Ordine ${idp} segnato come fatto.`);
-        printOrdinations();
-    })
-    .catch(error => console.error('Errore durante l\'aggiornamento dell\'ordine:', error));
-}
-
-function printOrdinations() {
-    fetch('api/ordini/stato/In%20Attesa')
+fetch('api/ordini')
     .then(response => response.json())
     .then(data => {
-        console.log('Full API response:', data);
 
         let container = document.getElementById('products-container');
-        while (container.firstChild) {
-            container.removeChild(container.firstChild);
-        }
 
         data.forEach(order => {
             let ordineDiv = document.createElement('div');
@@ -111,6 +85,3 @@ function printOrdinations() {
         });
     })
     .catch(error => console.error('Error fetching or processing data:', error));
-}
-
-printOrdinations();

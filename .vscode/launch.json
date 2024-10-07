@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PasswordVerification",
+            "request": "launch",
+            "mainClass": "com.gruppo.Security.PasswordVerification",
+            "projectName": "derubati"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-PizzeriaIDerubatiApplication<pizzeria-i-derubati>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -17,6 +24,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.gruppo.PizzeraIDerubatiApplication",
             "projectName": "PizzerIDerubati",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PizzeraIDerubatiApplication<derubati>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.gruppo.PizzeraIDerubatiApplication",
+            "projectName": "derubati",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

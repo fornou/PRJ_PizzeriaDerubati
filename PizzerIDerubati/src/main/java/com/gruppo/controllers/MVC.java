@@ -11,6 +11,11 @@ public class MVC {
 	    return "login"; 
     }
 	
+	@GetMapping("admin")
+	public String admin() {
+	    return "admin"; 
+    }
+
 	@GetMapping("")
 	String index() {
 		return "index";

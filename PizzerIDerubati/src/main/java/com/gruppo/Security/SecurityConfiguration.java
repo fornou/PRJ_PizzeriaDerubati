@@ -47,6 +47,7 @@ public class SecurityConfiguration {
                                 "/calzone",
                                 "/carrello",
                                 "/dolce",
+                                "/admin",
                                 "/focaccia",
                                 "/menu",
                                 "/pizza",
