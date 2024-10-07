@@ -272,7 +272,8 @@ function visualizzaCarrello() {
 
                 if (object.pizzaId <= 77) {
                     let addIngredientButton = document.createElement('button');
-                    addIngredientButton.textContent = 'Aggiungi Ingrediente';
+                    addIngredientButton.classList.add('listIng')
+                    addIngredientButton.textContent = '+';
                     addIngredientButton.onclick = () => mostraIngredientiDisponibili(`${object.pizzaId}_${index}`, selectedProducts);
                     selectedProducts.appendChild(addIngredientButton);
                 }
@@ -283,16 +284,12 @@ function visualizzaCarrello() {
                 last++;
 			  
                 if (last === nonRemovedCount) {
-                    let totalDiv = document.createElement('div');
-                    totalDiv.classList.add('totale');
 
-                    let totalLabel = document.createElement('h3');
-                    totalLabel.textContent = 'Total: €' + totalPrice.toFixed(2);
-                    totalDiv.appendChild(totalLabel);
-
-                    container.appendChild(totalDiv);
+                    let total = document.getElementById('total');
+                    total.textContent='';
+                    total.textContent = 'Total: €' + totalPrice.toFixed(2);
                     
-                     localStorage.setItem('totalPrice', totalPrice.toFixed(2));
+                    localStorage.setItem('totalPrice', totalPrice.toFixed(2));
                 }
             });
     });
@@ -321,7 +318,8 @@ function aggiornaIngredienti(selectedProducts, pizzaId) {
         ingredienteItem.textContent = ingrediente.nome;
 
         let removeButton = document.createElement('button');
-        removeButton.textContent = 'Rimuovi';
+        removeButton.classList.add('remIng');
+        removeButton.textContent = '-';
         removeButton.onclick = () => rimuoviIngrediente(pizzaId, ingrediente.idp);
         ingredienteItem.appendChild(removeButton);
 
@@ -346,7 +344,8 @@ function mostraIngredientiDisponibili(pizzaId, selectedProducts) {
                 ingredienteDiv.textContent = ingrediente.nome;
 
                 let addButton = document.createElement('button');
-                addButton.textContent = 'Aggiungi';
+                addButton.classList.add('ingredient-btn');
+                addButton.textContent = '+';
                 addButton.onclick = () => aggiungiIngrediente(pizzaId, ingrediente.idp, ingrediente.nome);
                 ingredienteDiv.appendChild(addButton);
 
@@ -357,7 +356,8 @@ function mostraIngredientiDisponibili(pizzaId, selectedProducts) {
             selectedProducts.style.height = '1500px'; 
 
             let hideButton = document.createElement('button');
-            hideButton.textContent = 'Nascondi Ingredienti';
+            hideButton.classList.add('hide-button');
+            hideButton.textContent = 'x';
             hideButton.onclick = () => nascondiIngredienti(selectedProducts, ingredientiContainer, hideButton);
             selectedProducts.appendChild(hideButton);
         });
@@ -459,7 +459,7 @@ document.getElementById('invia').addEventListener('click', () => {
     }
     let loadingText = document.createElement('p');
     loadingText.id = 'loading-text';
-    loadingText.textContent = 'Caricamento ordine...';
+    loadingText.textContent = 'Caricamento invio ordine...';
     container.appendChild(loadingText);
 
     fetch('api/ordini', {
@@ -477,6 +477,7 @@ document.getElementById('invia').addEventListener('click', () => {
         localStorage.setItem('carrello', JSON.stringify(carrello));
         localStorage.setItem('ingredientiMatrice', JSON.stringify(ingredientiMatrice));
         document.getElementById('invia').style.display = 'none';
+        document.getElementById('total').innerHTML = '';
         visualizzaCarrello();
     })
     .catch(error => console.error('Errore durante la creazione dell\'ordine:', error))
