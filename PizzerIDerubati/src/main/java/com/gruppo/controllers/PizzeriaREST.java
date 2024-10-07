@@ -3,6 +3,8 @@ package com.gruppo.controllers;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import org.springframework.security.access.prepost.PreAuthorize;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -79,21 +81,25 @@ public class PizzeriaREST {
 		return iService.getAllIngredienti();
 	}
 	
+	@PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
 	@GetMapping("ordini")
 	public List<Ordine> getOrdine() {
 		return oService.getOrdine();
 	}
 	
+	@PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
 	@GetMapping("proj/ordini")
 	public List<OrdineP> getOrdineP() {
 		return oService.getFindAllOrdini();
 	}
-
+	
+	@PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
 	@PostMapping("ordini/stato/aggiorna/{id}")
 	public Ordine getOrdineAggiornato(@PathVariable Integer id) {
 		return oService.aggiornaStatoOrdine(id);
 	}
-
+	
+	@PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
 	@GetMapping("ordini/stato/{stato}")
 	public List<Ordine> getOrdineByStato(@PathVariable String stato) {
 		return oService.getOrdineByStato(stato);
@@ -237,5 +243,6 @@ public class PizzeriaREST {
     @GetMapping("proj/pizze/codice/{id}")
     public PizzaP getPizzaByIdP(@PathVariable Integer id) {
         return pService.getAllPizzaById(id);
-    }	
+    }
+
 }

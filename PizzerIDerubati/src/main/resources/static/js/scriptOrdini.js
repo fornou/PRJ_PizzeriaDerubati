@@ -218,7 +218,6 @@ function printOrdinations() {
 
 printOrdinations();*/
 
-
 function setOrdineAsDone(idp) {
     fetch(`api/ordini/stato/aggiorna/${idp}`, {
         method: 'POST',

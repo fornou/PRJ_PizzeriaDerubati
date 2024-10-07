@@ -1,11 +1,15 @@
 package com.gruppo.controllers;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MVC {
+	
+    @GetMapping("login")
+	public String login() {
+	    return "login"; 
+    }
 	
 	@GetMapping("")
 	String index() {
@@ -56,4 +60,5 @@ public class MVC {
 	public String getCarrello() { 
 		return "carrello";
 	}
+	
 }

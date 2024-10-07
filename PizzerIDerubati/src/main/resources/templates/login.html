@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>I Derubati - Login</title>
+        <meta name="description" content="My new wonderful website">
+        <meta name="author" content="Mister X">
+        <meta name="csrf-token" content="${_csrf.token}">
+    </head>
+<body>
+    <h1>Login</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <button id="logoutButton" style="display:none;">Logout</button>
+    <script src="/js/login.js"></script>
+</body>
+</html>
