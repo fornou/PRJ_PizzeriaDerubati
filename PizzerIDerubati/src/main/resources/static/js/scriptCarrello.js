@@ -128,6 +128,10 @@ function visualizzaCarrello() {
         aggiungiCounter = 0;
         localStorage.setItem('rimuoviCounter', rimuoviCounter);
         localStorage.setItem('aggiungiCounter', aggiungiCounter);
+        
+        let total = document.getElementById('total');
+        total.textContent = '';
+        localStorage.removeItem('totalPrice');
     }
 }
 
@@ -221,7 +225,9 @@ function nascondiIngredienti(pizzaDiv, ingredientiContainer, hideButton) {
 }
 
 document.getElementById('invia').addEventListener('click', () => {
-    let pizzeOrdineRequest = carrello.map((item, index) => {
+    let pizzeOrdineRequest = carrello
+    .filter(item => !item.rimosso)
+    .map((item, index) => {
         return {
             pizzaId: item.pizzaId,
             quantita: item.quantita,
