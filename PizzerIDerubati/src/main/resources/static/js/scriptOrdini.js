@@ -42,63 +42,19 @@ function printOrdinations() {
             date.textContent = 'Data: ' + order.data;
             ordineDiv.appendChild(date);
 
-            // Gestione delle pizze con lo stesso nome ma quantità diverse
-            let pizzeGestite = new Set();
-            let ingCounter = 0; 
-            order.ordiniPizze.forEach(pizzaOrder => {
-                if (pizzeGestite.has(pizzaOrder.pizza.nome)) {
-                    return;
-                }
-                pizzeGestite.add(pizzaOrder.pizza.nome);
-				
-				let nomePizza = document.createElement('h2');
-				nomePizza.classList.add('ing');
-                nomePizza.textContent = pizzaOrder.pizza.nome;
-                ordineDiv.appendChild(nomePizza);
+            order.ingredientiPersonalizzati.forEach((ingredienti, index) => {
+                let pizzaDiv = document.createElement('div');
+                pizzaDiv.classList.add('pizza');
 
+                let pizzaTitle = document.createElement('h3');
+                pizzaTitle.textContent = 'Pizza';
+                pizzaDiv.appendChild(pizzaTitle);
 
-                order.ingredientiPersonalizzati.forEach(ing => {
-                    let ingredientiP = document.createElement('p');
-                    ingredientiP.classList.add('ing');
-                    ingredientiP.textContent = `Ingredienti: ${ing.ingredienti} (Quantità: ${ing.quantita})`;
-                    ingredientiP.style.top = `${ingCounter * 80}px`;
-                    ordineDiv.appendChild(ingredientiP);
-                    ingCounter++;
-                });
-            });
+                let ingredientiP = document.createElement('p');
+                ingredientiP.textContent = `Ingredienti: ${ingredienti.ingredienti} (Quantità: ${ingredienti.quantita})`;
+                pizzaDiv.appendChild(ingredientiP);
 
-            // Gestione delle pizze con nomi diversi
-            let pizzeNomiDiversi = new Set();
-            order.ordiniPizze.forEach((pizzaOrder, index) => {
-                if (!pizzeNomiDiversi.has(pizzaOrder.pizza.nome)) {
-                    pizzeNomiDiversi.add(pizzaOrder.pizza.nome);
-
-                    let nomePizza = document.createElement('h2');
-                    nomePizza.classList.add('engo');
-                    nomePizza.textContent = pizzaOrder.pizza.nome;
-                    ordineDiv.appendChild(nomePizza);
-
-
-                    // Trova gli ingredienti personalizzati per questa pizza
-                    let ing = order.ingredientiPersonalizzati[index];
-                    if (ing) {
-                        let ingredientiP = document.createElement('p');
-                        ingredientiP.classList.add('engo');
-                        ingredientiP.textContent = `Ingredienti: ${ing.ingredienti} (Quantità: ${ing.quantita})`;
-                        ordineDiv.appendChild(ingredientiP);
-                    }
-                }
-            });
-
-            // Rimuovi gli elementi con classe 'ing' per le pizze con nomi diversi
-            let engoElements = ordineDiv.querySelectorAll('.engo');
-            engoElements.forEach(engoElement => {
-                let ingElements = ordineDiv.querySelectorAll('.ing');
-                ingElements.forEach(ingElement => {
-                    if (engoElement.textContent === ingElement.textContent) {
-                        ingElement.remove();
-                    }
-                });
+                ordineDiv.appendChild(pizzaDiv);
             });
 
             let buttonDone = document.createElement('button');
