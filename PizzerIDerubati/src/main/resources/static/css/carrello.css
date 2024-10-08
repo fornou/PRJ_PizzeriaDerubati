@@ -63,22 +63,25 @@ main {
 
 
 
-
-
-
-
-
-
-
+/* Ridurre la larghezza e altezza del product */
 .product {
-    margin: 12px;
-    width: 389px;
-    min-height: 350px;
-    box-sizing: border-box; 
+    width: calc(100% - 50px); /* Riduce leggermente la larghezza del prodotto */
+    max-height: 800px;
+    max-width: 350px; /* Limita la larghezza massima */
     background-color: #fff;
-    border-radius: 25px;
-    text-align: center; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px; /* Riduce il padding interno */
+    text-align: center;
     position: relative;
+    margin: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition for hover effect */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
 .product img {
@@ -88,39 +91,43 @@ main {
 }
 
 .product h2 {
-    font-size: 1.5em;
+    font-size: 1.6em; /* Increased font size */
+    margin-bottom: 10px;
 }
 
-.product .price{
+.product .price {
     color: #f57c00;
-    font-size: 24px;
-    text-align: center;
-    display: inline-block;
+    font-size: 26px; /* Increased font size */
     font-weight: 900;
+    margin-bottom: 10px;
 }
 
-.product p{
+.product p {
     margin: 5px;
 }
 
 .product input[type="number"] {
     width: 50px;
-    height: 20px;
-    font-size: 24px;
+    height: 30px;
+    font-size: 18px;
     text-align: center;
-    border: 2px solid #f57c00; /* bordo del campo */
+    border: 2px solid #f57c00;
     border-radius: 5px;
-    outline: none;
     padding: 5px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.product button{
+.product input[type="number"]:focus {
+    border-color: #d32f2f; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+}
+
+.product button {
     width: 50px;
     height: 50px;
-    margin-left: 50px;
+    margin-left: 20px;
     border-radius: 50%;
-    background-color: #f57c00; 
+    background-color: #f57c00;
     color: white;
     font-size: 24px;
     text-align: center;
@@ -128,21 +135,23 @@ main {
     cursor: pointer;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform for hover effect */
 }
 
-.product button:hover{
+.product button:hover {
     background-color: #d16a03;
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-.product button.remove{
+.product button.remove {
     background-color: #ff0000;
     position: absolute;
     top: -10px;
-    left: 320px;
+    right: -10px;
+    border-radius: 50%;
 }
 
-.product button.remove:hover{
+.product button.remove:hover {
     background-color: #d16a03;
 }
 
@@ -162,20 +171,26 @@ main {
     margin-left: 40px;
 }
 
+/* Responsive design per schermi piccoli */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem; /* Adjusted padding for smaller screens */
+    }
 
-#send-order{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    gap: 10px;
+    h1 {
+        font-size: 2.5em; /* Reduced font size */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reduced font size */
+    }
+
+    .product {
+        width: calc(100% - 20px); /* Responsive width */
+        margin: 10px 0; /* Vertical margin */
+    }
 }
 
-ul{
-    list-style: none;
-    text-align: left;
-    margin-left: 70px;
-}
 
 
 
@@ -184,15 +199,18 @@ ul{
 
 
 
-/* Container per gli ingredienti */
+
+/* Modifiche al contenitore degli ingredienti */
 .ingredienti-container {
     display: grid;
-    grid-template-columns: repeat(3, 0.5fr); 
-    height: 150px;
-    gap: 15px;
+    grid-template-columns: repeat(3, 0.5fr);  
+    gap: 15px; 
     padding: 10px;
     background-color: #f3e5ab; 
     border-radius: 15px;
+    max-height: 150px; 
+    width: 100%;
+    overflow-y: auto;
 }
 
 .ingredienti-container button {
@@ -213,6 +231,14 @@ ul{
     transform: scale(1.1);
 }
 
+
+
+
+
+
+
+
+
 button.hide-button {
     background-color: #d32f2f;
     color: white;
@@ -226,9 +252,17 @@ button.hide-button {
     background-color: #b71c1c;
 }
 
-.ingredienti-container {
-    max-width: 500px;
-    max-height: 500px; /* Imposta un'altezza massima */
-    overflow-y: auto;
+
+#send-order{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
 }
 
+ul{
+    list-style: none;
+    text-align: left;
+    margin-left: 70px;
+}
