@@ -7,19 +7,27 @@
         <meta name="description" content="My new wonderful website">
         <meta name="author" content="Mister X">
         <meta name="csrf-token" content="${_csrf.token}">
+        <link rel="stylesheet" href="/css/home.css?v=1.1">
+		<link rel="icon" type="image/png" size="16x16"href="/img/logo1-removebg.png">
     </head>
 <body>
-    <h1>Login</h1>
-    <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type="submit">Login</button>
-    </form>
-    <button id="logoutButton" style="display:none;">Logout</button>
+
+    <header>
+        <img src="/img/logo1-removebg.png" alt="">
+        <h1> "I Derubati" Login </h1>
+        <h2> Inserisci le credenziali... </h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+            <button type="reset">Reset</button>
+        </form>
+        <button id="logoutButton" style="display:none;">Logout</button>
+    </header>
     <script src="/js/login.js"></script>
 </body>
 </html>
