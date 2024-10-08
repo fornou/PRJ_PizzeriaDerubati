@@ -45,17 +45,6 @@ function caricaProdotti(tipo) {
         });
 }
 
-/*function aggiungiAlCarrello(id, quantita) {
-    let item = carrello.find(item => item.pizzaId === id);
-    if (item) {
-        item.quantita += parseInt(quantita);
-    } else {
-        carrello.push({ pizzaId: id, quantita: parseInt(quantita) });
-    }
-    localStorage.setItem('carrello', JSON.stringify(carrello));
-    alert('Pizza aggiunta al carrello!');
-}*/
-
 function aggiungiAlCarrello(id, quantita) {
     let uniqueId = Date.now();
     carrello.push({ pizzaId: id, quantita: parseInt(quantita), uniqueId });

@@ -11,9 +11,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import java.util.stream.Collectors;
 
-import com.gruppo.Security.UserPrincipal;
 import com.gruppo.entities.User;
 import com.gruppo.repos.UserDAO;
+import com.gruppo.security.UserPrincipal;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

@@ -20,64 +20,85 @@ function setOrdineAsDone(idp) {
 }
 
 function printOrdinations() {
+    let loadingText = document.getElementById('desc');
+    loadingText.textContent = 'Caricamento ordini...';
+
     fetch('api/ordini/stato/In%20Attesa')
     .then(response => response.json())
     .then(data => {
-        console.log('Full API response:', data);
+        if (data.length === 0) {
+            loadingText.textContent = 'Nessun ordine!';
+        } else {
+            let container = document.getElementById('products-container');
 
-        let container = document.getElementById('products-container');
-        while (container.firstChild) {
-            container.removeChild(container.firstChild);
-        }
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+            loadingText.textContent = '';
+            data.forEach(order => {
+                let ordineDiv = document.createElement('div');
+                ordineDiv.classList.add('product');
+                
+                let title = document.createElement('h2');
+                title.textContent = 'Ordine: ' + order.cod;
+                ordineDiv.appendChild(title);
+                
+                let date = document.createElement('p');
+                date.textContent = 'Data: ' + order.data;
+                ordineDiv.appendChild(date);
 
-        data.forEach(order => {
-            let ordineDiv = document.createElement('div');
-            ordineDiv.classList.add('product');
-            
-            let title = document.createElement('h2');
-            title.textContent = 'Ordine: ' + order.cod;
-            ordineDiv.appendChild(title);
-            
-            let date = document.createElement('p');
-            date.textContent = 'Data: ' + order.data;
-            ordineDiv.appendChild(date);
+                order.ordiniPizze.forEach(prodotto => {
+                    let prodottoDiv = document.createElement('div');
+                    prodottoDiv.classList.add('pizza');
 
-            order.ingredientiPersonalizzati.forEach((ingredienti) => {
-                if (ingredienti.ingredienti.trim() !== '') {
-                    let pizzaDiv = document.createElement('div');
-                    pizzaDiv.classList.add('pizza');
+                    let prodottoTitle = document.createElement('h3');
+                    prodottoTitle.textContent = prodotto.pizza.nome + ' - ' + prodotto.pizza.tipo + ' - ' + prodotto.quantita  ;
+                    prodottoDiv.appendChild(prodottoTitle);
 
-                    let pizzaTitle = document.createElement('h3');
-                    tipo = ingredienti.tipo;
-                    if(tipo == "Pizza"){
-                    	pizzaTitle.textContent = 'Pizza';
-                    }else if(tipo == "Calzone"){
-						pizzaTitle.textContent = 'Calzone';
-					}else if(tipo == "Focaccia"){
-						pizzaTitle.textContent = 'Focaccia';
-					}else{
-						pizzaTitle.textContent = '';
-					}
-                    pizzaDiv.appendChild(pizzaTitle);
-                    
-                    let ingredientiP = document.createElement('p');
-                    ingredientiP.textContent = `Ingredienti: ${ingredienti.ingredienti} (Quantità: ${ingredienti.quantita})`;
-                    pizzaDiv.appendChild(ingredientiP);
+                    let ingredientiList = document.createElement('ul');
 
-                    ordineDiv.appendChild(pizzaDiv);
-                }
+                    // Cerca se ci sono ingredienti personalizzati per questo prodotto
+                    let customIngredients = order.ingredientiPersonalizzati.find(ing => 
+                        ing.tipo === prodotto.pizza.tipo
+                    );
+
+                    // Usa ingredienti personalizzati se presenti, altrimenti usa gli ingredienti standard
+                    if (customIngredients && customIngredients.ingredienti.trim() !== '') {
+                        let customIngredientiArray = customIngredients.ingredienti.split(',');
+
+                        let prodMod = document.createElement('p');
+                        prodMod.textContent =  ' Ingredienti totali: ' ;
+                        prodottoDiv.appendChild(prodMod);
+
+                        customIngredientiArray.forEach(ingrediente => {
+                            let ingredienteItem = document.createElement('li');
+                            ingredienteItem.textContent = ingrediente.trim();
+                            ingredientiList.appendChild(ingredienteItem);
+                        });
+                    } else {
+                        prodotto.pizza.ingredienti.forEach(ingrediente => {
+                            let ingredienteItem = document.createElement('li');
+                            ingredienteItem.textContent = ingrediente.nome + ` (${ingrediente.prezzo}€)`;
+                            ingredientiList.appendChild(ingredienteItem);
+                        });
+                    }
+
+                    prodottoDiv.appendChild(ingredientiList);
+                    ordineDiv.appendChild(prodottoDiv);
+                });
+
+                let buttonDone = document.createElement('button');
+                buttonDone.classList.add('remove');
+                buttonDone.innerHTML = 'X';
+                buttonDone.onclick = () => setOrdineAsDone(order.cod);
+                ordineDiv.appendChild(buttonDone);
+
+                container.appendChild(ordineDiv);
             });
-
-            let buttonDone = document.createElement('button');
-            buttonDone.classList.add('remove');
-            buttonDone.innerHTML = 'X';
-            buttonDone.onclick = () => setOrdineAsDone(order.cod);
-            ordineDiv.appendChild(buttonDone);
-
-            container.appendChild(ordineDiv);
-        });
+        }
     })
     .catch(error => console.error('Error fetching or processing data:', error));
 }
 
 printOrdinations();
+

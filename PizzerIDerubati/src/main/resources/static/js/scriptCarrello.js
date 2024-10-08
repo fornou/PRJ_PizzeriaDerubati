@@ -42,6 +42,8 @@ function visualizzaCarrello() {
         container.removeChild(container.firstChild);
     }
 
+    document.getElementById('desc').innerHTML='Carrello vuoto!';
+
     totalPrice = 0;
     let last = 0;
     let hasNonRemovedPizza = false;
@@ -51,6 +53,8 @@ function visualizzaCarrello() {
         if (object.rimosso) {
             return;
         }
+
+        document.getElementById('desc').innerHTML='Se togli un ingrediente, il costo totale verrà abbassato di 2€, al contrario verrà aumentato di 2€.';
 
         hasNonRemovedPizza = true;
 
@@ -278,6 +282,9 @@ document.getElementById('invia').addEventListener('click', () => {
     let loadingText = document.createElement('p');
     loadingText.id = 'loading-text';
     loadingText.textContent = 'Caricamento invio ordine...';
+    document.getElementById('desc').innerHTML='Carrello vuoto!';
+    document.getElementById('invia').style.display = 'none';
+    document.getElementById('total').innerHTML = '';
     container.appendChild(loadingText);
 
     fetch('api/ordini', {
@@ -294,8 +301,7 @@ document.getElementById('invia').addEventListener('click', () => {
         ingredientiMatrice = {};
         localStorage.setItem('carrello', JSON.stringify(carrello));
         localStorage.setItem('ingredientiMatrice', JSON.stringify(ingredientiMatrice));
-        document.getElementById('invia').style.display = 'none';
-        document.getElementById('total').innerHTML = '';
+        
         visualizzaCarrello();
     })
     .catch(error => console.error('Errore durante la creazione dell\'ordine:', error))

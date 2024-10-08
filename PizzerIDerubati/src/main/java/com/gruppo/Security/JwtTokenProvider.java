@@ -1,4 +1,4 @@
-package com.gruppo.Security;
+package com.gruppo.security;
 
 import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;

@@ -17,12 +17,12 @@ public class MVC {
     }
 
 	@GetMapping("")
-	String index() {
+	public String index() {
 		return "index";
 	}
 
 	@GetMapping("home")
-	String home() {
+	public String home() {
 		return "home";
 	}
 	

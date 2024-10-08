@@ -266,3 +266,13 @@ ul{
     text-align: left;
     margin-left: 70px;
 }
+
+
+p#loading-text{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: medium;
+    text-align: center;
+}

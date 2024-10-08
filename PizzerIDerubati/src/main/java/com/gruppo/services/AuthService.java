@@ -7,12 +7,12 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import com.gruppo.Security.JwtTokenProvider;
 import com.gruppo.controllers.LoginRequest;
 import com.gruppo.entities.User;
 import com.gruppo.entities.UserAuthority;
 import com.gruppo.entities.UserAuthorityId;
 import com.gruppo.repos.UserDAO;
+import com.gruppo.security.JwtTokenProvider;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import java.util.Set;
