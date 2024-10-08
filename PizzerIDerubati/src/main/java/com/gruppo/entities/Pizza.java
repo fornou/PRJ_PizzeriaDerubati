@@ -92,4 +92,16 @@ public class Pizza {
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
+	public Set<Ingrediente> getIngredienti() {
+		return ingredienti;
+	}
+	public void setIngredienti(Set<Ingrediente> ingredienti) {
+		this.ingredienti = ingredienti;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 }

@@ -29,7 +29,10 @@ public class OrdineIngrediente {
     
     @Column(name = "quantita")
     private int quantita;
-
+    
+    @Column(name = "tipo")
+    private String tipo;
+    
 	public int getId() {
 		return id;
 	}
@@ -59,6 +62,16 @@ public class OrdineIngrediente {
     }
 
 	public void setQuantita(int quantita) {
-	    this.quantita = quantita;
+	   this.quantita = quantita;
 	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	
+	
 }

@@ -148,8 +148,6 @@ function visualizzaCarrello() {
             });
     });
 
-	console.log("Valore globale di rimuoviCounter:", rimuoviCounter);
-    console.log("Valore globale di aggiungiCounter:", aggiungiCounter);
     localStorage.setItem('aggiungiCounter', aggiungiCounter);
     localStorage.setItem('rimuoviCounter', rimuoviCounter);
     

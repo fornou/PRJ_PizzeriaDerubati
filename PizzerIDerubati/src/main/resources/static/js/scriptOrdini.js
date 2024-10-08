@@ -48,7 +48,16 @@ function printOrdinations() {
                     pizzaDiv.classList.add('pizza');
 
                     let pizzaTitle = document.createElement('h3');
-                    pizzaTitle.textContent = 'Pizza';
+                    tipo = ingredienti.tipo;
+                    if(tipo == "Pizza"){
+                    	pizzaTitle.textContent = 'Pizza';
+                    }else if(tipo == "Calzone"){
+						pizzaTitle.textContent = 'Calzone';
+					}else if(tipo == "Focaccia"){
+						pizzaTitle.textContent = 'Focaccia';
+					}else{
+						pizzaTitle.textContent = '';
+					}
                     pizzaDiv.appendChild(pizzaTitle);
                     
                     let ingredientiP = document.createElement('p');

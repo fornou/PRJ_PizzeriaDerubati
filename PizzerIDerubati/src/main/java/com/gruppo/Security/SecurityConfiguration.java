@@ -41,17 +41,12 @@ public class SecurityConfiguration {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authorizeRequests -> authorizeRequests
                 .requestMatchers("/", 
-                                "/swagger-ui/**",
-                                "/swagger-ui.html",
-                                "/v3/api-docs.yaml",
-                                "/v3/api-docs/**",
-                                "/api/v1/auth/**",
+                                "/api/v1/auth/**",/*?*/
                                 "/home", 
                                 "/bevanda",
                                 "/calzone",
                                 "/carrello",
                                 "/dolce",
-                                "/admin",
                                 "/focaccia",
                                 "/menu",
                                 "/pizza",
@@ -67,7 +62,15 @@ public class SecurityConfiguration {
                                 "/img/**").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/ordini").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/ordini").hasAnyRole("ADMIN","USER")
-                .requestMatchers("api/proj/ordini","/ordini","api/ordini/stato/aggiorna/{id}","api/ordini/stato/{stato}").hasAnyRole("ADMIN", "USER")
+                .requestMatchers("api/proj/ordini",
+                				 "/ordini",
+                				 "api/ordini/stato/aggiorna/{id}",
+                				 "api/ordini/stato/{stato}",
+                				 "/admin", 
+                				 "/swagger-ui/**",
+                                 "/swagger-ui.html",
+                                 "/v3/api-docs.yaml",
+                                 "/v3/api-docs/**").hasAnyRole("ADMIN", "USER")
                 .anyRequest().authenticated()
             )
             .formLogin(formLogin -> formLogin

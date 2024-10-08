@@ -201,6 +201,7 @@ public class PizzeriaREST {
 	        OrdineIngrediente ordineIngrediente = new OrdineIngrediente();
 	        ordineIngrediente.setOrdine(ordine);
 	        ordineIngrediente.setIngredienti(ingredienti);
+	        ordineIngrediente.setTipo(pizza.getTipo());
 	        ordineIngrediente.setQuantita(request.getQuantita());
 	        ordine.getIngredientiPersonalizzati().add(ordineIngrediente);
 	    }
