@@ -4,9 +4,25 @@ let rimuoviCounter = parseInt(localStorage.getItem('rimuoviCounter')) || 0;
 let aggiungiCounter = parseInt(localStorage.getItem('aggiungiCounter')) || 0;
 
 
-function rimuoviDalCarrello(id) {
+/*function rimuoviDalCarrello(id) {
     carrello = carrello.map(item => {
         if (item.pizzaId === id) {
+            item.rimosso = true;
+        }
+        return item;
+    });
+    delete ingredientiMatrice[id];
+
+    localStorage.setItem('carrello', JSON.stringify(carrello));
+    localStorage.setItem('ingredientiMatrice', JSON.stringify(ingredientiMatrice));
+
+    alert('Pizza rimossa dal carrello!');
+    visualizzaCarrello();
+}*/
+
+function rimuoviDalCarrello(id, uniqueId) {
+    carrello = carrello.map(item => {
+        if (item.pizzaId === id && item.uniqueId === uniqueId) {
             item.rimosso = true;
         }
         return item;
@@ -64,7 +80,7 @@ function visualizzaCarrello() {
                 let removeButton = document.createElement('button');
                 removeButton.classList.add('remove');
                 removeButton.innerHTML = 'X';
-                removeButton.onclick = () => rimuoviDalCarrello(pizza.idp);
+                removeButton.onclick = () => rimuoviDalCarrello(pizza.idp, object.uniqueId);
                 selectedProducts.appendChild(removeButton);
                 
                 let loadingText = document.createElement('p');
