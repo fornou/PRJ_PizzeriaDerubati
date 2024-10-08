@@ -92,7 +92,7 @@ function visualizzaCarrello() {
                     loadingText.style.display = 'none';
                 }
 
-                if (!ingredientiMatrice[`${object.pizzaId}_${index}`]) {
+                /*if (!ingredientiMatrice[`${object.pizzaId}_${index}`]) {
                     fetch(`api/pizze/codice/${object.pizzaId}`)
                         .then(response => response.json())
                         .then(pizzaConIngredienti => {
@@ -104,8 +104,26 @@ function visualizzaCarrello() {
                 } else {
                     aggiornaIngredienti(selectedProducts, `${object.pizzaId}_${index}`);
                     loadingText.style.display = 'none';
+                }*/
+                
+                if (object.pizzaId <= 77) {
+                    if (ingredientiMatrice[`${object.pizzaId}_${index}`]) {
+                        aggiornaIngredienti(selectedProducts, `${object.pizzaId}_${index}`);
+                        loadingText.style.display = 'none';
+                    } else {
+                        fetch(`api/pizze/codice/${object.pizzaId}`)
+                            .then(response => response.json())
+                            .then(pizzaConIngredienti => {
+                                ingredientiMatrice[`${object.pizzaId}_${index}`] = pizzaConIngredienti.ingredienti;
+                                localStorage.setItem('ingredientiMatrice', JSON.stringify(ingredientiMatrice));
+                                aggiornaIngredienti(selectedProducts, `${object.pizzaId}_${index}`);
+                                loadingText.style.display = 'none';
+                            });
+                    }
+                } else {
+                    loadingText.style.display = 'none';
                 }
-
+                
                 if (object.pizzaId <= 77) {
                     let addIngredientButton = document.createElement('button');
                     addIngredientButton.classList.add('listIng')
@@ -244,10 +262,14 @@ document.getElementById('invia').addEventListener('click', () => {
     let pizzeOrdineRequest = carrello
     .filter(item => !item.rimosso)
     .map((item, index) => {
+        let ingredienti = [];
+        if (item.pizzaId <= 77) {
+            ingredienti = ingredientiMatrice[`${item.pizzaId}_${index}`] ? ingredientiMatrice[`${item.pizzaId}_${index}`].map(ingrediente => ingrediente.nome) : [];
+        }
         return {
             pizzaId: item.pizzaId,
             quantita: item.quantita,
-            ingredienti: ingredientiMatrice[`${item.pizzaId}_${index}`] ? ingredientiMatrice[`${item.pizzaId}_${index}`].map(ingrediente => ingrediente.nome) : []
+            ingredienti: ingredienti
         };
     });
     

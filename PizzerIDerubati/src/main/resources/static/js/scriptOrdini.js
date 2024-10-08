@@ -42,19 +42,21 @@ function printOrdinations() {
             date.textContent = 'Data: ' + order.data;
             ordineDiv.appendChild(date);
 
-            order.ingredientiPersonalizzati.forEach((ingredienti, index) => {
-                let pizzaDiv = document.createElement('div');
-                pizzaDiv.classList.add('pizza');
+            order.ingredientiPersonalizzati.forEach((ingredienti) => {
+                if (ingredienti.ingredienti.trim() !== '') {
+                    let pizzaDiv = document.createElement('div');
+                    pizzaDiv.classList.add('pizza');
 
-                let pizzaTitle = document.createElement('h3');
-                pizzaTitle.textContent = 'Pizza';
-                pizzaDiv.appendChild(pizzaTitle);
+                    let pizzaTitle = document.createElement('h3');
+                    pizzaTitle.textContent = 'Pizza';
+                    pizzaDiv.appendChild(pizzaTitle);
+                    
+                    let ingredientiP = document.createElement('p');
+                    ingredientiP.textContent = `Ingredienti: ${ingredienti.ingredienti} (Quantità: ${ingredienti.quantita})`;
+                    pizzaDiv.appendChild(ingredientiP);
 
-                let ingredientiP = document.createElement('p');
-                ingredientiP.textContent = `Ingredienti: ${ingredienti.ingredienti} (Quantità: ${ingredienti.quantita})`;
-                pizzaDiv.appendChild(ingredientiP);
-
-                ordineDiv.appendChild(pizzaDiv);
+                    ordineDiv.appendChild(pizzaDiv);
+                }
             });
 
             let buttonDone = document.createElement('button');
