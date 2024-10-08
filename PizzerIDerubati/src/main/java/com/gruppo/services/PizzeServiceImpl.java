@@ -46,4 +46,15 @@ public class PizzeServiceImpl implements PizzeService{
 	public PizzaP getAllPizzaById(Integer id) {
 	    return dao.findPizzaById(id);
 	}
+
+	@Override
+	public List<Pizza> deletePizza(Integer id) {
+		dao.deleteById(id);
+		return getPizza();
+	}
+
+	@Override
+	public Pizza addPizza(Pizza p) {
+		return dao.save(p);
+	}
 }
