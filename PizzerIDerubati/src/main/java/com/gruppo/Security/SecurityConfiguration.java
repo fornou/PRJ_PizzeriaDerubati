@@ -29,7 +29,6 @@ public class SecurityConfiguration {
     private final CustomJwtFilter customJwtFilter;
     private final PasswordEncoder passwordEncoder;
 
-    @Autowired
     public SecurityConfiguration(CustomUserDetailsService userDetailsService, CustomJwtFilter customJwtFilter, PasswordEncoder passwordEncoder) {
         this.userDetailsService = userDetailsService;
         this.customJwtFilter = customJwtFilter;
@@ -42,6 +41,11 @@ public class SecurityConfiguration {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authorizeRequests -> authorizeRequests
                 .requestMatchers("/", 
+                                "/swagger-ui/**",
+                                "/swagger-ui.html",
+                                "/v3/api-docs.yaml",
+                                "/v3/api-docs/**",
+                                "/api/v1/auth/**",
                                 "/home", 
                                 "/bevanda",
                                 "/calzone",
