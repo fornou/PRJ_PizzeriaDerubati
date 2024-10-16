@@ -58,7 +58,6 @@ public class AuthService {
             UserAuthority authority = new UserAuthority();
             UserAuthorityId authorityId = new UserAuthorityId();
             authorityId.setUserId(admin.getId());
-            authorityId.setAuthority("ROLE_ADMIN");
             authority.setId(authorityId);
             authority.setUser(admin);
             authority.setAuthority("ROLE_ADMIN");
